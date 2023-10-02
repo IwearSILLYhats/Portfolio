@@ -18,14 +18,13 @@ function check () {
     if (preference.match === true && localStorage.getItem('dark') === null){
         colorPref = true
         save()
-        update()
-        darktoggle.checked = true
     }
+    update()
 }
 
 check()
 
-darktoggle.addEventListener('change', () => {
+darktoggle.addEventListener('click', () => {
     toggle()
     update()
     save()
